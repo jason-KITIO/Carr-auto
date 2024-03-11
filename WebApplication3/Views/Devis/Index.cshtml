@@ -1,0 +1,459 @@
+﻿@model devis
+
+@{
+    ViewData["Title"] = "Produits Page";
+}
+
+
+<div class="d-flex justify-content-between">
+    <h1 style="color:aliceblue">Panier</h1>
+    <p class="position-fixed d-flex flex-column" style="right:10px; z-index:1">
+        <a class="btn btn-secondary m-1" asp-action="Create">Livrer a domicile</a>
+        <a class="btn btn-secondary m-1" asp-action="imprimer" onclick="window.print()" >imprimer</a>
+    </p>
+</div>
+
+<table class="table" style="color:aliceblue">
+    <thead>
+        <tr>
+            <th>
+                Elements
+            </th>
+            <th>
+                Prix
+            </th>
+            <th>
+                Qantite
+            </th>
+            <th>
+                total
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model.mainsOeuvres)
+        {
+            @if (item.nombre > 0)
+            {
+                <tr>
+                    <td class="align-middle">
+                        <img src="@item.image" style="width: 100px;" />
+                        @* @Html.DisplayFor(modelItem => item.Photo) *@
+                    </td>
+                    <td class="align-middle">
+                        @Html.DisplayFor(modelItem => item.prix)
+                    </td>
+                    <td class="align-middle" style="text-align-last: center;">
+                        <form class="boutonB" asp-controller="Pneu" asp-action="AddService" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM">
+                                <i class="bi bi-arrow-up"></i>
+                            </button>
+                        </form>
+                        @Html.DisplayFor(modelItem => item.nombre)
+
+                        <form class="boutonB" asp-controller="Pneu" asp-action="removeService" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM" type="submit">
+                                <i class="bi bi-arrow-down"></i>
+                            </button>
+                        </form>
+                    </td>
+                    <td class="align-middle">
+                        <form class="align-middle d-flex gap-2" asp-controller="Pneu" asp-action="restartmainsOeuvres" method="post" style="color: white;">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button type="submit" class="buttonM"  class="buttonM" style="color: white;">
+                                @item.TotalPrice $ <i class="bi bi-x"></i>
+                            </button>
+                        </form>
+
+                    </td>
+                </tr>
+            }
+
+        }
+        @foreach (var item in Model.gentes)
+        {
+            @if (item.nombre > 0)
+            {
+                <tr>
+                    <td class="align-middle">
+                        <img src="@item.image" style="width: 100px;" />
+                        @* @Html.DisplayFor(modelItem => item.Photo) *@
+                    </td>
+                    <td class="align-middle">
+                        @Html.DisplayFor(modelItem => item.prix)
+                    </td>
+                    <td class="align-middle" style="text-align-last: center;">
+                        <form class="boutonB" asp-controller="Pneu" asp-action="AddGentes" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM">
+                                <i class="bi bi-arrow-up"></i>
+                            </button>
+                        </form>
+                        @Html.DisplayFor(modelItem => item.nombre)
+
+                        <form class="boutonB" asp-controller="Pneu" asp-action="removeGentes" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM" type="submit">
+                                <i class="bi bi-arrow-down"></i>
+                            </button>
+                        </form>
+                    </td>
+                    <td class="align-middle">
+
+                        <form class="align-middle d-flex gap-2" asp-controller="Pneu" asp-action="restartgentes" method="post" style="color: white;">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button type="submit" class="buttonM"  style="color: white;">
+                                @item.TotalPrice $ <i class="bi bi-x"></i>
+                            </button>
+                        </form>
+
+                    </td>
+                </tr>
+            }
+
+        }
+        @foreach (var item in Model.Pneus)
+        {
+            @if (item.nombre > 0)
+            {
+                <tr>
+                    <td class="align-middle">
+                        <img src="@item.image" style="width: 100px;" />
+                        @* @Html.DisplayFor(modelItem => item.Photo) *@
+                    </td>
+                    <td class="align-middle">
+                        @Html.DisplayFor(modelItem => item.prix)
+                    </td>
+                    <td class="align-middle" style="text-align-last: center;">
+                        <form class="boutonB" asp-controller="Pneu" asp-action="AddPneus" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM">
+                                <i class="bi bi-arrow-up"></i>
+                            </button>
+                        </form>
+                        @Html.DisplayFor(modelItem => item.nombre)
+
+                        <form class="boutonB" asp-controller="Pneu" asp-action="removePneus" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM" type="submit">
+                                <i class="bi bi-arrow-down"></i>
+                            </button>
+                        </form>
+                    </td>
+                    <td class="align-middle">
+
+                        <form class="align-middle d-flex gap-2" asp-controller="Pneu" asp-action="restartpneus" method="post" style="color: white;">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button type="submit" class="buttonM"  style="color: white;">
+                                @item.TotalPrice $ <i class="bi bi-x"></i>
+                            </button>
+                        </form>
+
+                    </td>
+                </tr>
+            }
+
+        }
+        @foreach (var item in Model.roue)
+        {
+            @if (item.nombre > 0)
+            {
+                <tr>
+                    <td class="align-middle">
+                        <img src="@item.image" style="width: 100px;" />
+                        @* @Html.DisplayFor(modelItem => item.Photo) *@
+                    </td>
+                    <td class="align-middle">
+                        @Html.DisplayFor(modelItem => item.prix)
+                    </td>
+                    <td class="align-middle" style="text-align-last: center;">
+                        <form class="boutonB" asp-controller="Pneu" asp-action="AddRoue" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM">
+                                <i class="bi bi-arrow-up"></i>
+                            </button>
+                        </form>
+                        @Html.DisplayFor(modelItem => item.nombre)
+
+                        <form class="boutonB" asp-controller="Pneu" asp-action="removeRoue" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM" type="submit">
+                                <i class="bi bi-arrow-down"></i>
+                            </button>
+                        </form>
+                    </td>
+                    <td class="align-middle">
+
+                        <form class="align-middle d-flex gap-2" asp-controller="Pneu" asp-action="restartroue" method="post" style="color: white;">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button type="submit" class="buttonM"  style="color: white;">
+                                @item.TotalPrice $ <i class="bi bi-x"></i>
+                            </button>
+                        </form>
+
+                    </td>
+                </tr>
+            }
+
+        }
+
+
+        @foreach (var item in Model.Voiture)
+        {
+            @if (item.nombre > 0)
+            {
+                <tr>
+                    <td class="align-middle">
+                        <img src="@item.image" style="width: 100px;" />
+                        @* @Html.DisplayFor(modelItem => item.Photo) *@
+                    </td>
+                    <td class="align-middle">
+                        @Html.DisplayFor(modelItem => item.prix)
+                    </td>
+                    <td class="align-middle" style="text-align-last: center;">
+                        <form class="boutonB" asp-controller="Voitures" asp-action="AddVoiture" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM">
+                                <i class="bi bi-arrow-up"></i>
+                            </button>
+                        </form>
+                        @Html.DisplayFor(modelItem => item.nombre)
+
+                        <form class="boutonB" asp-controller="Voitures" asp-action="removeVoiture" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM" type="submit">
+                                <i class="bi bi-arrow-down"></i>
+                            </button>
+                        </form>
+                    </td>
+                    <td class="align-middle">
+
+                        <form class="align-middle d-flex gap-2" asp-controller="Voitures" asp-action="restart" method="post" style="color: white;">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button type="submit" class="buttonM"  style="color: white;">
+                                @item.TotalPrice $ <i class="bi bi-x"></i>
+                            </button>
+                        </form>
+
+                    </td>
+                </tr>
+            }
+
+        }
+
+        @foreach (var item in Model.reparations)
+        {
+            @if (item.nombre > 0)
+            {
+                <tr>
+                    <td class="align-middle">
+                        <img src="@item.image" style="width: 100px;" />
+                        @* @Html.DisplayFor(modelItem => item.Photo) *@
+                    </td>
+                    <td class="align-middle">
+                        @Html.DisplayFor(modelItem => item.prix)
+                    </td>
+                    <td class="align-middle" style="text-align-last: center;">
+                        <form class="boutonB" asp-controller="Voitures" asp-action="AddVoiture" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM">
+                                <i class="bi bi-arrow-up"></i>
+                            </button>
+                        </form>
+                        @Html.DisplayFor(modelItem => item.nombre)
+
+                        <form class="boutonB" asp-controller="Voitures" asp-action="removeVoiture" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM" type="submit">
+                                <i class="bi bi-arrow-down"></i>
+                            </button>
+                        </form>
+                    </td>
+                    <td class="align-middle">
+
+                        <form class="align-middle d-flex gap-2" asp-controller="Voitures" asp-action="restart" method="post" style="color: white;">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button type="submit" class="buttonM"  style="color: white;">
+                                @item.TotalPrice $ <i class="bi bi-x"></i>
+                            </button>
+                        </form>
+
+                    </td>
+                </tr>
+            }
+
+        }
+
+        @foreach (var item in Model.batteries)
+        {
+            @if (item.nombre > 0)
+            {
+                <tr>
+                    <td class="align-middle">
+                        <img src="@item.image" style="width: 100px;" />
+                        @* @Html.DisplayFor(modelItem => item.Photo) *@
+                    </td>
+                    <td class="align-middle">
+                        @Html.DisplayFor(modelItem => item.prix)
+                    </td>
+                    <td class="align-middle" style="text-align-last: center;">
+                        <form class="boutonB" asp-controller="Produits" asp-action="Addbatteries" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM">
+                                <i class="bi bi-arrow-up"></i>
+                            </button>
+                        </form>
+                        @Html.DisplayFor(modelItem => item.nombre)
+
+                        <form class="boutonB" asp-controller="Produits" asp-action="removebatteries" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM" type="submit">
+                                <i class="bi bi-arrow-down"></i>
+                            </button>
+                        </form>
+                    </td>
+                    <td class="align-middle">
+
+                        <form class="align-middle d-flex gap-2" asp-controller="Produits" asp-action="restartbatteries" method="post" style="color: white;">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button type="submit" class="buttonM"  style="color: white;">
+                                @item.TotalPrice $ <i class="bi bi-x"></i>
+                            </button>
+                        </form>
+
+                    </td>
+                </tr>
+            }
+
+        }
+        @foreach (var item in Model.moteurs)
+        {
+            @if (item.nombre > 0)
+            {
+                <tr>
+                    <td class="align-middle">
+                        <img src="@item.image" style="width: 100px;" />
+                        @* @Html.DisplayFor(modelItem => item.Photo) *@
+                    </td>
+                    <td class="align-middle">
+                        @Html.DisplayFor(modelItem => item.prix)
+                    </td>
+                    <td class="align-middle" style="text-align-last: center;">
+                        <form class="boutonB" asp-controller="Produits" asp-action="Addmoteurs" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM">
+                                <i class="bi bi-arrow-up"></i>
+                            </button>
+                        </form>
+                        @Html.DisplayFor(modelItem => item.nombre)
+
+                        <form class="boutonB" asp-controller="Produits" asp-action="removemoteurs" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM" type="submit">
+                                <i class="bi bi-arrow-down"></i>
+                            </button>
+                        </form>
+                    </td>
+                    <td class="align-middle">
+
+                        <form class="align-middle d-flex gap-2" asp-controller="Produits" asp-action="restartmoteurs" method="post" style="color: white;">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button type="submit" class="buttonM"  style="color: white;">
+                                @item.TotalPrice $ <i class="bi bi-x"></i>
+                            </button>
+                        </form>
+
+                    </td>
+                </tr>
+            }
+
+        }
+        @foreach (var item in Model.suspensions)
+        {
+            @if (item.nombre > 0)
+            {
+                <tr>
+                    <td class="align-middle">
+                        <img src="@item.image" style="width: 100px;" />
+                        @* @Html.DisplayFor(modelItem => item.Photo) *@
+                    </td>
+                    <td class="align-middle">
+                        @Html.DisplayFor(modelItem => item.prix)
+                    </td>
+                    <td class="align-middle" style="text-align-last: center;">
+                        <form class="boutonB" asp-controller="Produits" asp-action="Addsuspensions" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM">
+                                <i class="bi bi-arrow-up"></i>
+                            </button>
+                        </form>
+                        @Html.DisplayFor(modelItem => item.nombre)
+
+                        <form class="boutonB" asp-controller="Produits" asp-action="removesuspensions" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM" type="submit">
+                                <i class="bi bi-arrow-down"></i>
+                            </button>
+                        </form>
+                    </td>
+                    <td class="align-middle">
+
+                        <form class="align-middle d-flex gap-2" asp-controller="Produits" asp-action="restartsuspensions" method="post" style="color: white;">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button type="submit" class="buttonM"  style="color: white;">
+                                @item.TotalPrice $ <i class="bi bi-x"></i>
+                            </button>
+                        </form>
+
+                    </td>
+                </tr>
+            }
+
+        }
+        @foreach (var item in Model.turboCompresseur)
+        {
+            @if (item.nombre > 0)
+            {
+                <tr>
+                    <td class="align-middle">
+                        <img src="@item.image" style="width: 100px;" />
+                        @* @Html.DisplayFor(modelItem => item.Photo) *@
+                    </td>
+                    <td class="align-middle">
+                        @Html.DisplayFor(modelItem => item.prix)
+                    </td>
+                    <td class="align-middle" style="text-align-last: center;">
+                        <form class="boutonB" asp-controller="Produits" asp-action="AddturboCompresseur" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM">
+                                <i class="bi bi-arrow-up"></i>
+                            </button>
+                        </form>
+                        @Html.DisplayFor(modelItem => item.nombre)
+
+                        <form class="boutonB" asp-controller="Produits" asp-action="removeturboCompresseur" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="buttonM" type="submit">
+                                <i class="bi bi-arrow-down"></i>
+                            </button>
+                        </form>
+                    </td>
+                    <td class="align-middle">
+
+                        <form class="align-middle d-flex gap-2" asp-controller="Produits" asp-action="restartturboCompresseur" method="post" style="color: white;">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button type="submit" class="buttonM"  style="color: white;">
+                                @item.TotalPrice $ <i class="bi bi-x"></i>
+                            </button>
+                        </form>
+
+                    </td>
+                </tr>
+            }
+
+        }
+    </tbody>
+</table>

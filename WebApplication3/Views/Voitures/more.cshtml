@@ -1,0 +1,135 @@
+﻿@model IEnumerable<WebApplication3.Models.Voiture>
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+<h2>Liste de Voitures par Catégorie</h2>
+
+<form class="boutonB" asp-controller="Voitures" asp-action="AfficherParCategorie" method="post" style="padding: 0px">
+    @Html.DropDownList("categorie", ViewBag.Categories as SelectList, "Sélectionner une catégorie")
+    <input type="submit" value="Filtrer" />
+</form>
+
+@* partie services *@
+<div class="noServices">
+    <div class="row justify-content-around">
+        <div class="col-md-4">
+
+            <div class="desroues">
+
+                <div class="noServices">
+                    <h2 class="titreserviceVoiture">Nos Voitures</h2>
+                    <div class="liga">
+                        <hr class="barre" />
+                        <img src="~/asp/Steering Wheel.png" class="volan" />
+                        <hr class="barre" />
+                    </div>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <div class="d-flex justify-content-between">
+                            <h1>Voiture</h1>
+                            <p class="position-fixed" style="right:10px; z-index:1">
+                                <a class="boutonB" asp-controller="Pneu" asp-action="CreateVoiture" style="padding-top: 10px; border-radius: 10px:">
+                                    <i class="bi bi-plus"></i> <span>Ajouter une voiture</span>
+                                </a>
+                            </p>
+                        </div>
+                    }
+                    <div class="nosvoiture">
+                        @foreach (var item in Model)
+                        {
+                            <div class="boxvoiture1">
+                                <div class="imgvoiture">
+                                    <img src="@item.image" class="voiture" />
+                                </div>
+                                <h4 style="color:white">
+                                    @item.nom
+                                </h4>
+                                <div class="d-flex flex-column text-center">
+                                    <h7 style="margin: 0px;">@item.prix $</h7>
+                                    @if (SignInManager.IsSignedIn(User))
+                                    {
+                                        @if (!User.IsInRole("Admin"))
+                                        {
+                                            <span> quantité d’articles dans le pannier : @item.nombre</span>
+                                        }
+                                    }
+                                </div>
+                                <div class="panierB flex-column d-flex">
+                                    @if (SignInManager.IsSignedIn(User))
+                                    {
+                                        @if (User.IsInRole("Admin"))
+                                        {
+
+                                            <a class="boutonB" asp-controller="Pneu" asp-action="EditVoiture" Asp-route-id="@item.Id" style="padding-top: 10px;">
+                                                <input type="hidden" name="id" value="@item.Id" />
+                                                <button class="buttonM d-flex gap-2 text-white">
+                                                    <i class="bi bi-pencil-square"></i> <span>Modifier</span>
+                                                </button>
+                                            </a>
+
+                                            <a class="boutonB" asp-controller="Pneu" asp-action="DeleteVoiture" Asp-route-id="@item.Id" style="padding-top: 10px;">
+                                                <input type="hidden" name="id" value="@item.Id" />
+                                                <button class="buttonM d-flex gap-2 text-white" type="submit">
+                                                    <i class="bi bi-trash"></i>Delete
+                                                </button>
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <form class="boutonB" asp-controller="Voitures" asp-action="AddVoiture" method="post">
+                                                <input type="hidden" name="id" value="@item.Id" />
+                                                <button class="buttonM">
+                                                    <a class="boutonA">
+                                                        <img src="~/asp/buy.png" alt="buy" />
+                                                        <span>Ajouter Au panier</span>
+                                                    </a>
+                                                </button>
+                                            </form>
+
+                                            <form class="boutonB" asp-controller="Voitures" asp-action="removeVoiture" method="post">
+                                                <input type="hidden" name="id" value="@item.Id" />
+                                                <button class="buttonM" type="submit">
+                                                    <a class="boutonA">
+                                                        <img src="~/asp/return purchase.png" />
+                                                        <span>retirer du panier</span>
+                                                    </a>
+                                                </button>
+                                            </form>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <form class="boutonB" asp-area="Identity" asp-page="/Account/Register">
+                                            <input type="hidden" name="id" value="@item.Id" />
+                                            <button class="buttonM" type="submit">
+                                                <a class="boutonA">
+                                                    <img src="~/asp/buy.png" alt="buy" />
+                                                    <span>Ajouter Au panier</span>
+                                                </a>
+                                            </button>
+                                        </form>
+
+                                        <form class="boutonB" asp-area="Identity" asp-page="/Account/Login">
+                                            <input type="hidden" name="id" value="@item.Id" />
+                                            <button class="buttonM" type="submit">
+                                                <a class="boutonA">
+                                                    <img src="~/asp/return purchase.png" />
+                                                    <span>retirer du panier</span>
+                                                </a>
+                                            </button>
+                                        </form>
+                                    }
+                                </div>
+
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

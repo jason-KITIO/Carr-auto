@@ -1,0 +1,46 @@
+﻿@using WebApplication3.Data.enums
+@model WebApplication3.Models.Produits.batterie
+
+@{
+    ViewData["Title"] = "EditBatterie";
+}
+
+<h1>EditBatterie</h1>
+
+<h4>batterie</h4>
+<hr />
+<div class="row">
+        <div class="col-md-5">
+            <form asp-action="EditBatterie">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <label asp-for="image" class="control-label"></label>
+                    <input asp-for="image" class="form-control" />
+                    <span asp-validation-for="image" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="prix" class="control-label"></label>
+                    <input asp-for="prix" class="form-control" />
+                    <span asp-validation-for="prix" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                <label asp-for="marque" class="control-label"></label>
+                <select asp-for="marque" class="form-control" asp-items="Html.GetEnumSelectList<marque>()"></select>
+                    <span asp-validation-for="marque" class="text-danger"></span>
+                </div>
+                <div class="form-group d-flex justify-content-around" style="padding-top: 20px; padding-bottom : 20px">
+                <input type="submit" value="Update" class="btn btn-outline-primary" />
+                    <a class="btn btn-outline-success align-middle" asp-action="Index">Back to List</a>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-5">
+            <!--Ajouter la previsualisation d'une photo de profile-->
+            <div class="form-group text-center">
+                <img id="PhotoProfilePreview" src="@Model.image" style="max-width: 530px;max-height: 300px;" />
+            </div>
+            <!--Fin-->
+        </div>
+    </div>
+

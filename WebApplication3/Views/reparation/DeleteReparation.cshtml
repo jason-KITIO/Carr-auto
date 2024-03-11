@@ -1,0 +1,67 @@
+﻿@model WebApplication3.Models.Reparation
+
+@{
+    ViewData["Title"] = "DeleteReparation";
+}
+
+<h1>DeleteReparation</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Reparation</h4>
+    <hr />
+    <div class="row">
+        <dl class="row col-md-5">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.nom)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.nom)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.description)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.description)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.statut)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.statut)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.prix)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.prix)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.nombre)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.nombre)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.categorie)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.categorie)
+            </dd>
+        </dl>
+
+        <div class="col-md-5">
+            <!--Ajouter la previsualisation d'une photo de profile-->
+            <div class="form-group text-center">
+                <img id="PhotoProfilePreview" src="@Model.image" style="max-width: 530px;max-height: 300px;" />
+            </div>
+            <!--Fin-->
+        </div>
+    </div>
+
+    <form asp-action="DeleteReparation">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a class="btn btn-outline-success align-middle" asp-action="Index">Back to List</a>
+    </form>
+</div>

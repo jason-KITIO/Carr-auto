@@ -1,0 +1,71 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<h1>@ViewData["Title"]</h1>
+<div class="row d-flex justify-content-around">
+    <div class="col-md-6">
+        <section>
+            <form id="account" method="post">
+                <h2>nice to see you again</h2>
+                <hr />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-floating m-2">
+                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
+                    <label asp-for="Input.Email" class="form-label"></label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-floating m-2">
+                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
+                    <label asp-for="Input.Password" class="form-label"></label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div>
+                    <div class="checkbox">
+                        <label asp-for="Input.RememberMe" class="form-label m-1 d-flex justify-content-end text-white">
+                            <input class="form-check-input" asp-for="Input.RememberMe" />
+                            @Html.DisplayNameFor(m => m.Input.RememberMe)
+                        </label>
+                        <p class="d-flex m-1 d-flex justify-content-end">
+                            <a id="forgot-password" class="nav-link " asp-page="./ForgotPassword">Forgot your password?</a>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
+                </div>
+                <div class="m-1">
+                    <hr />
+                    <div class ="d-flex justify-content-around">
+                        <p class="d-flex">J’ai deja un compte ?  <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="nav-link" style="padding:1px">Creer un</a> </p>
+                    </div>
+                    @* <p class="d-flex m-1">
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="btn btn-lg btn-outline-secondary">Register as a new user</a>
+                    </p>*@
+                    <p class="m-1">
+                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation" class="btn btn-lg btn-outline-secondary">Resend email confirmation</a>
+                    </p> 
+                </div>
+            </form>
+        </section>
+    </div>
+    <div class="col-md-5 col-md-offset-2">
+
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <!--Ajouter la previsualisation d'une photo de profile-->
+                <div class="form-group text-center">
+                    <img id="PhotoProfilePreview" src="https://i.pinimg.com/564x/f7/45/47/f745479527e4a3d34c58acc18de65d57.jpg" style="max-width: 530px;max-height: 530px;" />
+                </div>
+                <!--Fin-->
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

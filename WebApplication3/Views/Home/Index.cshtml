@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (User.IsInRole("Admin"))
+{
+    
+}
+<div class="IndexHomeBody">
+    <video class="HomeVideo" autoplay muted loop>
+        <source src="./AUTODOC_VISITE_COMPLÈTE_DU_GARAGE.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="HomeOverlay"></div>
+    <div class="texteHome">
+
+        <div id="content">
+            <p style="font-weight:bold;font-size:64px">Carr'auto</>
+            <p style="font-size:32px">Garage de la famille Carro</p>
+            <p style="font-size:32px">situé à Luxey, petite commune du Sud Ouest de la France.</p>
+        </div>
+
+    </div>
+</div>

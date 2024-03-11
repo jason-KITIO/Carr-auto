@@ -1,0 +1,327 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WebApplication3
+build_property.RootNamespace = WebApplication3
+build_property.ProjectDir = C:\Users\Jason Kitio\Documents\ASP\WebApplication3 - Copie (2) - Copie - Copie - Copie\WebApplication3\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Jason Kitio\Documents\ASP\WebApplication3 - Copie (2) - Copie - Copie - Copie\WebApplication3
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW5hYmxlQXV0aGVudGljYXRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Devis/imprimer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2aXNcaW1wcmltZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Devis/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2aXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Nombre/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9tYnJlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Pneu/CreateGentes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG5ldVxDcmVhdGVHZW50ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Pneu/CreatePneus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG5ldVxDcmVhdGVQbmV1cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Pneu/CreateRoue.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG5ldVxDcmVhdGVSb3VlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Pneu/CreateServices.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG5ldVxDcmVhdGVTZXJ2aWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Pneu/DeleteGentes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG5ldVxEZWxldGVHZW50ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Pneu/DeletePneus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG5ldVxEZWxldGVQbmV1cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Pneu/DeleteRoue.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG5ldVxEZWxldGVSb3VlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Pneu/DeleteServices.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG5ldVxEZWxldGVTZXJ2aWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Pneu/EditGentes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG5ldVxFZGl0R2VudGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Pneu/EditPneus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG5ldVxFZGl0UG5ldXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Pneu/EditRoue.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG5ldVxFZGl0Um91ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Pneu/EditServices.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG5ldVxFZGl0U2VydmljZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Pneu/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG5ldVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Pneu/moreGentes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG5ldVxtb3JlR2VudGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Pneu/morePneus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG5ldVxtb3JlUG5ldXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Pneu/moreRoue.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG5ldVxtb3JlUm91ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Pneu/moreServices.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG5ldVxtb3JlU2VydmljZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/AfficherParCategorieBatterie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcQWZmaWNoZXJQYXJDYXRlZ29yaWVCYXR0ZXJpZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/AfficherParCategoriefreins.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcQWZmaWNoZXJQYXJDYXRlZ29yaWVmcmVpbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/AfficherParCategorieMoteur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcQWZmaWNoZXJQYXJDYXRlZ29yaWVNb3RldXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/AfficherParCategorieSuspension.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcQWZmaWNoZXJQYXJDYXRlZ29yaWVTdXNwZW5zaW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/AfficherParCategorieTurboCompresseur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcQWZmaWNoZXJQYXJDYXRlZ29yaWVUdXJib0NvbXByZXNzZXVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/CreateBatterie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcQ3JlYXRlQmF0dGVyaWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/Createfreins.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcQ3JlYXRlZnJlaW5zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/CreateMoteur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcQ3JlYXRlTW90ZXVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/CreateSuspension.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcQ3JlYXRlU3VzcGVuc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/CreateTurboCompresseur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcQ3JlYXRlVHVyYm9Db21wcmVzc2V1ci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/DeleteBatterie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcRGVsZXRlQmF0dGVyaWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/Deletefreins.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcRGVsZXRlZnJlaW5zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/DeleteMoteur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcRGVsZXRlTW90ZXVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/DeleteSuspension.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcRGVsZXRlU3VzcGVuc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/DeleteTurboCompresseur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcRGVsZXRlVHVyYm9Db21wcmVzc2V1ci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/EditBatterie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcRWRpdEJhdHRlcmllLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/Editfreins.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcRWRpdGZyZWlucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/EditMoteur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcRWRpdE1vdGV1ci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/EditSuspension.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcRWRpdFN1c3BlbnNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/EditTurboCompresseur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcRWRpdFR1cmJvQ29tcHJlc3NldXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/moreBatterie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcbW9yZUJhdHRlcmllLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/morefreins.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcbW9yZWZyZWlucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/moreMoteur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcbW9yZU1vdGV1ci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/moreSuspension.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcbW9yZVN1c3BlbnNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Produits/moreTurboCompresseur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVpdHNcbW9yZVR1cmJvQ29tcHJlc3NldXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/reparation/CreateReparation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccmVwYXJhdGlvblxDcmVhdGVSZXBhcmF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/reparation/DeleteReparation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccmVwYXJhdGlvblxEZWxldGVSZXBhcmF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/reparation/EditReparation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccmVwYXJhdGlvblxFZGl0UmVwYXJhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/reparation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccmVwYXJhdGlvblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Voitures/AfficherParCategorie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9pdHVyZXNcQWZmaWNoZXJQYXJDYXRlZ29yaWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Voitures/CreateVoiture.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9pdHVyZXNcQ3JlYXRlVm9pdHVyZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Voitures/DeleteVoiture.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9pdHVyZXNcRGVsZXRlVm9pdHVyZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Voitures/EditVoiture.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9pdHVyZXNcRWRpdFZvaXR1cmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Voitures/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9pdHVyZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Voitures/more.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9pdHVyZXNcbW9yZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Voitures/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9pdHVyZXNcTm90Rm91bmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jason Kitio/Documents/ASP/WebApplication3 - Copie (2) - Copie - Copie - Copie/WebApplication3/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-7kk3sr3rte

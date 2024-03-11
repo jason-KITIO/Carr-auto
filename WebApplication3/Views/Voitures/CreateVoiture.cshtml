@@ -1,0 +1,68 @@
+﻿@using WebApplication3.Data.enums
+@model WebApplication3.Models.Voiture
+
+@{
+    ViewData["Title"] = "CreateVoiture";
+}
+
+<h1>CreateVoiture</h1>
+
+<h4>Voiture</h4>
+<hr />
+<div class="row">
+    <div class="col-md-5">
+        <form asp-action="CreateVoiture">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="image" class="control-label"></label>
+                <input asp-for="image" class="form-control" />
+                <span asp-validation-for="image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nom" class="control-label"></label>
+                <input asp-for="nom" class="form-control" />
+                <span asp-validation-for="nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="prix" class="control-label"></label>
+                <input asp-for="prix" class="form-control" />
+                <span asp-validation-for="prix" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="categorie" class="control-label"></label>
+                <select asp-for="categorie" class="form-control" asp-items="Html.GetEnumSelectList<categorieVoiture>()"></select>
+                <span asp-validation-for="categorie" class="text-danger"></span>
+            </div>
+            <div class="form-group d-flex justify-content-around" style="padding-top: 20px; padding-bottom : 20px">
+                <input type="submit" value="Create" class="btn btn-outline-primary" />
+                <a class="btn btn-outline-success align-middle" asp-action="Index">Back to List</a>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-5">
+        <!--Ajouter la previsualisation d'une photo de profile-->
+        <div class="form-group text-center">
+            <img id="PhotoProfilePreview" style="max-width: 530px;max-height: 300px;" />
+        </div>
+        <!--Fin-->
+    </div>
+</div>
+
+
+
+<!--Ajouter la previsualisation d'une photo de profile-->
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            var output = document.getElementById('PhotoProfilePreview');
+            const inputImage = document.getElementById("image");
+            output.src = inputImage.value;
+        })
+        $("#image").on("change", function () {
+            var output = document.getElementById('PhotoProfilePreview');
+            output.src = $(this).val();
+        })
+
+    </script>
+}
+<!--Fin-->

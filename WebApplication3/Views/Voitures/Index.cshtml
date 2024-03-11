@@ -1,0 +1,199 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@model IEnumerable<WebApplication3.Models.Voiture>
+
+<div class="bgHome">
+
+    <div class="text-center">
+        <h1 class="display-4">SPORT CAR</h1>
+        <p>Une voiture, bien plus qu’un simple moyen de transport.</p>
+    </div>
+</div>
+
+<div class="text-center ">
+    @* <h1 class="display-4">Welcome</h1> *@
+    @* <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+    <div class="nosroue">
+        <div class="nosrouegauche">
+            <img src="~/image 6.png" class="imageRoue" />
+        </div>
+        <div class="textpnues">
+            <h2 class="titreroue">MCARS</h2>
+            <div class="log">
+                <hr class="barre" />
+                <img src="~/asp/Steering Wheel.png" class="volan" />
+                <hr class="barre" />
+
+
+            </div>
+            <div>
+                La voiture, Sa carrosserie, sculptée avec élégance, reflète la fusion de l’art et de l’ingénierie.<br/>
+
+                Les phares, tels des yeux perçants, illuminent la route dans l’obscurité. À l’intérieur, un habitacle confortable accueille les passagers, avec des sièges douillets et un tableau de bord futuriste.<br />
+
+                Le moteur gronde, vibrant d’énergie, prêt à propulser la machine vers l’inconnu. Les lignes aérodynamiques suggèrent la vitesse, tandis que le volant attend les mains du conducteur.<br />
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<h2>Liste de Voitures par Catégorie</h2>
+
+@* partie services *@
+<div class="noServices">
+    <div class="row justify-content-around">
+        <div class="col-md-4">
+
+            <div class="desroues">
+
+                <div class="noServices">
+                    <h2 class="titreserviceVoiture">Nos Voitures</h2>
+                    <div class="liga">
+                        <hr class="barre" />
+                        <img src="~/asp/Steering Wheel.png" class="volan" />
+                        <hr class="barre" />
+                    </div>
+                    <div class="nosvoiture">
+                        @foreach (var item in Model)
+                        {
+                            <div class="boxvoiture1">
+                                <div class="imgvoiture">
+                                    <img src="@item.image" class="voiture" />
+                                </div>
+                                <h4 style="color:white">
+                                    @item.nom
+                                </h4>
+                                <div class="d-flex flex-column text-center">
+                                    <h7 style="margin: 0px;">@item.prix $</h7>
+                                    @if (SignInManager.IsSignedIn(User))
+                                    {
+                                        @if (!User.IsInRole("Admin"))
+                                        {
+                                            <span> quantité d’articles dans le pannier : @item.nombre</span>
+                                        }
+                                    }
+                                </div>
+                                <div class="panierB flex-column d-flex">
+                                    @if (SignInManager.IsSignedIn(User))
+                                    {
+                                        @if (User.IsInRole("Admin"))
+                                        {
+
+                                            <a class="boutonB" asp-controller="Voitures" asp-action="EditVoiture" Asp-route-id="@item.Id" style="padding-top: 10px;">
+                                                <input type="hidden" name="id" value="@item.Id" />
+                                                <button class="buttonM d-flex gap-2 text-white">
+                                                    <i class="bi bi-pencil-square"></i> <span>Modifier</span>
+                                                </button>
+                                            </a>
+
+                                            <a class="boutonB" asp-controller="Voitures" asp-action="DeleteVoiture" Asp-route-id="@item.Id" style="padding-top: 10px;">
+                                                <input type="hidden" name="id" value="@item.Id" />
+                                                <button class="buttonM d-flex gap-2 text-white" type="submit">
+                                                    <i class="bi bi-trash"></i>Delete
+                                                </button>
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <form class="boutonB" asp-controller="Voitures" asp-action="AddVoiture" method="post">
+                                                <input type="hidden" name="id" value="@item.Id" />
+                                                <button class="buttonM">
+                                                    <a class="boutonA">
+                                                        <img src="~/asp/buy.png" alt="buy" />
+                                                        <span>Ajouter Au panier</span>
+                                                    </a>
+                                                </button>
+                                            </form>
+
+                                            <form class="boutonB" asp-controller="Voitures" asp-action="removeVoiture" method="post">
+                                                <input type="hidden" name="id" value="@item.Id" />
+                                                <button class="buttonM" type="submit">
+                                                    <a class="boutonA">
+                                                        <img src="~/asp/return purchase.png" />
+                                                        <span>retirer du panier</span>
+                                                    </a>
+                                                </button>
+                                            </form>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <form class="boutonB" asp-area="Identity" asp-page="/Account/Register">
+                                            <input type="hidden" name="id" value="@item.Id" />
+                                            <button class="buttonM" type="submit">
+                                                <a class="boutonA">
+                                                    <img src="~/asp/buy.png" alt="buy" />
+                                                    <span>Ajouter Au panier</span>
+                                                </a>
+                                            </button>
+                                        </form>
+
+                                        <form class="boutonB" asp-area="Identity" asp-page="/Account/Login">
+                                            <input type="hidden" name="id" value="@item.Id" />
+                                            <button class="buttonM" type="submit">
+                                                <a class="boutonA">
+                                                    <img src="~/asp/return purchase.png" />
+                                                    <span>retirer du panier</span>
+                                                </a>
+                                            </button>
+                                        </form>
+                                    }
+                                    @* <form class="boutonB" asp-controller="Voitures" asp-action="AddVoiture" method="post">
+                                <input type="hidden" name="id" value="@item.Id" />
+                                <button class="buttonM">
+                                <a class="boutonA">
+                                <img src="~/asp/buy.png" alt="buy" />
+                                <span>Ajouter Au panier</span>
+                                </a>
+                                </button>
+                                </form>
+
+                                <form class="boutonB" asp-controller="Voitures" asp-action="removeVoiture" method="post">
+                                <input type="hidden" name="id" value="@item.Id" />
+                                <button class="buttonM" type="submit">
+                                <a class="boutonA">
+                                <img src="~/asp/return purchase.png" />
+                                <span>retirer du panier</span>
+                                </a>
+                                </button>
+                                </form> *@
+                                </div>
+
+                            </div>
+                        } 
+                    </div>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <div class="d-flex justify-content-evenly" style="width:100%; margin: 20px;">
+                            <form class="boutonB" asp-controller="Voitures" asp-action="more">
+                                <button class="buttonM">
+                                    <a class="boutonA">
+                                        <span>Show More</span>
+                                    </a>
+                                </button>
+                            </form>
+                            <a class="boutonB" asp-controller="Voitures" asp-action="CreateVoiture" style="padding-top: 10px;">
+                                <i class="bi bi-plus"></i> <span>Ajouter un service</span>
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@if (!User.IsInRole("Admin"))
+{
+    <form class="boutonB" asp-controller="Voitures" asp-action="more" style="margin: 20px 40px;">
+        <button class="buttonM">
+            <a class="boutonA">
+                <span>Show More</span>
+            </a>
+        </button>
+    </form>
+}

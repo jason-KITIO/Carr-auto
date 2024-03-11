@@ -1,0 +1,84 @@
+﻿@model IEnumerable<WebApplication3.Models.Reparation>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<div class="d-flex justify-content-between">
+    <h1>Reparation de Voiture</h1>
+    <p class="position-fixed" style="right:10px; z-index:1">
+        <a class="boutonB" asp-controller="Reparation" asp-action="CreateReparation" style="padding-top: 10px; border-radius: 10px:">
+            <i class="bi bi-plus"></i>
+            <span>Ajouter une voiture <br /> a la repration</span>
+        </a>
+    </p>
+</div>
+<table class="table text-white">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.statut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.prix)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.categorie)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="align-middle">
+                    <img src="@item.image" style="width: 100px;" />
+                </td>
+                <td class="align-middle">
+                    @Html.DisplayFor(modelItem => item.nom)
+                </td>
+                <td class="align-middle">
+                    @Html.DisplayFor(modelItem => item.description)
+                </td>
+                <td class="align-middle">
+                    @if (item.statut == true)
+                    {
+                        <span class="badge bg-info">Pas Encore disponible</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success">Disponible</span>
+                    }
+                </td>
+                <td class="align-middle">
+                    @Html.DisplayFor(modelItem => item.prix)
+                </td>
+                <td class="align-middle">
+                    @Html.DisplayFor(modelItem => item.nombre)
+                </td>
+                <td class="align-middle">
+                    @Html.DisplayFor(modelItem => item.categorie)
+                </td>
+                <td class="align-middle">
+                    <a class="btn btn-outline-info align-middle" asp-action="EditReparation" asp-route-id="@item.Id">Edit</a> |
+                    <a class="btn btn-outline-danger align-middle" asp-action="DeleteReparation" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,78 @@
+﻿@model IEnumerable<WebApplication3.Models.Voiture>
+
+<h2>Liste de Voitures par Catégorie</h2>
+
+
+<form class="boutonB" asp-controller="Voitures" asp-action="AfficherParCategorie" method="post" style="padding: 0px">
+    @Html.DropDownList("categorie", ViewBag.Categories as SelectList, "Sélectionner une catégorie")
+    <input type="submit" value="Filtrer" />
+</form>
+
+<form>
+        <div class="d-flex justify-content-between">
+            <p class="position-fixed" style="left:10px; z-index:1">
+            <a class="btn btn-secondary m-1" asp-controller="Voitures" asp-action="more"><i class="bi bi-plus"></i>Back</a>
+            </p>
+        </div>
+</form>
+
+@* partie services *@
+<div class="noServices">
+    <div class="row justify-content-around">
+        <div class="col-md-4">
+
+            <div class="desroues">
+
+                <div class="noServices">
+                    <h2 class="titreserviceVoiture">Nos Voitures</h2>
+                    <div class="liga">
+                        <hr class="barre" />
+                        <img src="~/asp/Steering Wheel.png" class="volan" />
+                        <hr class="barre" />
+                    </div>
+                    <div class="nosvoiture">
+                        @foreach (var item in Model)
+                        {
+                                <div class="boxvoiture1">
+                                    <div class="imgvoiture">
+                                        <img src="@item.image" class="voiture" />
+                                    </div>
+                                    <h4 style="color:aqua">
+                                        @item.nom
+                                    </h4>
+                                    <div class="txt1">
+                                        <h7>@item.prix $</h7>
+                                        <h7>vous @item.nombre</h7>
+                                    </div>
+                                    <div class="panierB flex-column d-flex">
+
+                                        <form class="boutonB" asp-controller="Voitures" asp-action="AddVoiture" method="post">
+                                            <input type="hidden" name="id" value="@item.Id" />
+                                        <button class="buttonM">
+                                                <a class="boutonA">
+                                                    <img src="~/asp/buy.png" alt="buy" />
+                                                    <span>Ajouter Au panier</span>
+                                                </a>
+                                            </button>
+                                        </form>
+
+                                        <form class="boutonB" asp-controller="Voitures" asp-action="removeVoiture" method="post">
+                                            <input type="hidden" name="id" value="@item.Id" />
+                                            <button class="buttonM" type="submit">
+                                                <a class="boutonA">
+                                                    <img src="~/asp/return purchase.png" />
+                                                    <span>retirer du panier</span>
+                                                </a>
+                                            </button>
+                                        </form>
+                                    </div>
+
+                                </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

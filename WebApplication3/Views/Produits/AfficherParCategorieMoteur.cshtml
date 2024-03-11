@@ -1,0 +1,135 @@
+﻿@model IEnumerable<WebApplication3.Models.Produits.moteur>
+
+@{
+    ViewData["Title"] = "moreBatterie";
+}
+
+
+<h2>Liste de Moteur par marque</h2>
+
+<form>
+    <div class="d-flex justify-content-between">
+        <p class="position-fixed" style="left:10px; z-index:1">
+            <a class="btn btn-secondary m-1" asp-controller="Produits"  asp-action="Index"><i class="bi bi-arrow-left"></i>Back</a>
+        </p>
+    </div>
+</form>
+
+<form class="boutonB" asp-controller="Produits" asp-action="AfficherParCategorieMoteur" method="post" style="padding: 0px">
+    @Html.DropDownList("categorie", ViewBag.Categories as SelectList, "Sélectionner une catégorie")
+    <input type="submit" value="Filtrer" />
+</form>
+
+@* //prtie moteurs *@
+
+<div class="desroues">
+
+    <div class="noServices">
+        <h2 class="titreservice">Nos moteurs</h2>
+        <div class="lig">
+            <hr class="barre" />
+            <img src="~/asp/Steering Wheel.png" class="volan" />
+            <hr class="barre" />
+        </div>
+        <div class="ligne">
+            <div class="element">
+                @foreach (var item in Model)
+                {
+                    <div class="boxrou">
+                        <div class="imgrou">
+                            <img src="@item.image" class="pneu" />
+                        </div>
+                        <div class="txt1">
+                            <h7>@item.prix $</h7>
+                            @if (SignInManager.IsSignedIn(User))
+                            {
+                                @if (!User.IsInRole("Admin"))
+                                {
+                                    <span> quantité d’articles dans le pannier : @item.nombre</span>
+                                }
+                            }
+                        </div>
+                        <div class="panierB">
+                            @if (SignInManager.IsSignedIn(User))
+                            {
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <a class="boutonB" asp-controller="Produits"  asp-action="EditMoteur" Asp-route-id="@item.Id" style="padding-top: 10px;">
+                                        <input type="hidden" name="id" value="@item.Id" />
+                                        <button class="buttonM">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                    </a>
+
+                                    <a class="boutonB" asp-controller="Produits"  asp-action="DeleteMoteur" Asp-route-id="@item.Id" style="padding-top: 10px;">
+                                        <input type="hidden" name="id" value="@item.Id" />
+                                        <button class="buttonM" type="submit">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <form class="boutonB" asp-controller="Produits"  asp-action="Addmoteurs" method="post">
+                                        <input type="hidden" name="id" value="@item.Id" />
+                                        <button class="buttonM">
+
+                                            <img src="~/asp/buy.png" alt="buy" />
+
+                                        </button>
+                                    </form>
+
+                                    <form class="boutonB" asp-controller="Produits"  asp-action="removemoteurs" method="post">
+                                        <input type="hidden" name="id" value="@item.Id" />
+                                        <button class="buttonM" type="submit">
+
+                                            <img src="~/asp/return purchase.png" />
+
+                                        </button>
+                                    </form>
+                                }
+                            }
+                            else
+                            {
+                                <form class="boutonB" asp-area="Identity" asp-page="/Account/Login">
+                                    <input type="hidden" name="id" value="@item.Id" />
+                                    <button class="buttonM">
+
+                                        <img src="~/asp/buy.png" alt="buy" />
+
+                                    </button>
+                                </form>
+
+                                <form class="boutonB" asp-area="Identity" asp-page="/Account/Login">
+                                    <input type="hidden" name="id" value="@item.Id" />
+                                    <button class="buttonM" type="submit">
+
+                                        <img src="~/asp/return purchase.png" />
+
+                                    </button>
+                                </form>
+                            }
+
+                        </div>
+
+                    </div>
+                }
+            </div>
+            <div class="d-flex justify-content-evenly" style="width:100%; margin-top: 20px">
+                <form class="boutonB" asp-controller="Produits"  asp-action="moreMoteur">
+                    <button class="buttonM">
+                        <a class="boutonA">
+                            <span>Voire d'autre Bate</span>
+                        </a>
+                    </button>
+                </form>
+                @if (User.IsInRole("Admin"))
+                {
+                    <a class="boutonB" asp-controller="Produits"  asp-action="CreateMoteur" style="padding-top: 10px;">
+                        <i class="bi bi-plus"></i> <span>Ajouter une roue</span>
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</div>

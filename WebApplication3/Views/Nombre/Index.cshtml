@@ -1,0 +1,22 @@
+﻿@model IEnumerable<NombreModel>
+
+<table>
+    @foreach (var nombre in Model)
+    {
+        <tr style="color: white;">
+            <td>@nombre.Nombre</td>
+            <td>
+                <form asp-controller="Nombre" asp-action="Incrementer" method="post">
+                    <input type="hidden" name="id" value="@nombre.Id" />
+                    <button class="buttonM" type="submit">Incrémenter</button>
+                </form>
+            </td>
+            <td>
+                <form asp-controller="Nombre" asp-action="decrementer" method="post">
+                    <input type="hidden" name="id" value="@nombre.Id" />
+                    <button class="buttonM" type="submit">Decrémenter</button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>
